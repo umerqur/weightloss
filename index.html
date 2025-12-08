@@ -333,24 +333,28 @@
       background: var(--white);
     }
 
-    .approach-columns {
+    .method-grid {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       gap: 80px;
       max-width: 1100px;
       margin: 60px auto 0;
-      text-align: left;
     }
 
-    .approach-column h3 {
+    .method-column {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .method-column h3 {
       font-size: 2.5rem;
       font-family: 'Playfair Display', serif;
       margin-bottom: 24px;
       color: var(--rose);
     }
 
-    .approach-column p {
+    .method-column p {
       font-size: 1.15rem;
       line-height: 1.8;
       margin-bottom: 24px;
@@ -739,7 +743,7 @@
       .hero-stripe { clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%); }
       .section-header h2 { font-size: 2.5rem; }
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
-      .approach-columns { flex-direction: column; gap: 48px; }
+      .method-grid { flex-direction: column; gap: 48px; }
       .benefits-grid { grid-template-columns: repeat(2, 1fr); }
       .program-grid { grid-template-columns: 1fr; gap: 32px; }
       .program-card.featured { transform: scale(1); }
@@ -756,6 +760,11 @@
       .section-benefits { padding: 80px 0; }
       .section-program { padding: 80px 0; }
       .section-booking { padding: 80px 0; }
+      .method-grid {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+      }
       .benefits-grid { grid-template-columns: 1fr; }
       .booking-wrapper { padding: 32px 24px; }
       .testimonial-card { padding: 40px 28px; }
@@ -864,8 +873,8 @@
         </p>
       </div>
 
-      <div class="approach-columns">
-        <div class="approach-column">
+      <div class="method-grid">
+        <div class="method-column">
           <h3>Expert Guidance</h3>
           <p>
             Our specialists monitor your progress, adjust your plan, and ensure your safety every step of the way.
@@ -877,7 +886,7 @@
           </ul>
         </div>
 
-        <div class="approach-column">
+        <div class="method-column">
           <h3>Metabolic Balance</h3>
           <p>
             We address the root causes—hormones, insulin resistance, inflammation—
