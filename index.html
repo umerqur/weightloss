@@ -119,6 +119,91 @@
       transform: translateY(-1px);
     }
 
+    /* Quick Benefits Section */
+    .section-quick-benefits {
+      padding: 80px 0 60px;
+      background: var(--white);
+    }
+
+    .quick-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .quick-benefit-item {
+      text-align: left;
+    }
+
+    .quick-benefit-item h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .quick-benefit-item p {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    .compact-testimonial {
+      max-width: 700px;
+      margin: 0 auto 48px;
+      background: var(--rose-light);
+      padding: 32px 40px;
+      border-radius: 16px;
+      text-align: center;
+      border-left: 4px solid var(--rose);
+    }
+
+    .compact-testimonial-text {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--text-dark);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .compact-testimonial-author {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      font-weight: 600;
+    }
+
+    .cta-block {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pricing-line {
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .phone-line {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: var(--text-body);
+    }
+
+    .phone-link {
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .phone-link:hover {
+      color: var(--rose-hover);
+      text-decoration: underline;
+    }
+
     /* Hero Section with Slideshow */
     .hero {
       position: relative;
@@ -744,6 +829,7 @@
       .hero h1 { font-size: 3.5rem; }
       .hero-stripe { clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%); }
       .section-header h2 { font-size: 2.5rem; }
+      .quick-benefits-grid { grid-template-columns: 1fr; gap: 32px; }
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
       .method-grid { flex-direction: column; gap: 48px; }
       .benefits-grid { grid-template-columns: repeat(2, 1fr); }
@@ -757,6 +843,10 @@
       .hero-content { padding: 60px 24px; }
       .hero-stripe { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
       .section-header h2 { font-size: 2rem; }
+      .section-quick-benefits { padding: 60px 0 40px; }
+      .quick-benefits-grid { gap: 24px; }
+      .compact-testimonial { padding: 24px 28px; }
+      .compact-testimonial-text { font-size: 1.1rem; }
       .section-challenge { padding: 80px 0; }
       .section-approach { padding: 80px 0; }
       .section-benefits { padding: 80px 0; }
@@ -781,7 +871,7 @@
     <div class="container">
       <div class="nav-content">
         <div class="logo">Sherlase</div>
-        <a href="#consult" class="nav-cta">Book Consultation</a>
+        <a href="#consultation" class="nav-cta">Book Consultation</a>
       </div>
     </div>
   </nav>
@@ -806,10 +896,109 @@
           Weight loss is hard. Your body fights back. Hormones shift. Life gets busy.
           But with the right support, you can finally achieve lasting results—safely and sustainably.
         </p>
-        <a href="#consult" class="btn-primary">
+        <a href="#consultation" class="btn-primary">
           Start Your Journey
           <span class="btn-arrow">→</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Benefits Section -->
+  <section class="section-quick-benefits">
+    <div class="container">
+      <div class="quick-benefits-grid">
+        <div class="quick-benefit-item">
+          <h3>Feel better in your first 30 days</h3>
+          <p>Studies show clients improve energy and mood quickly with the right metabolic plan.</p>
+        </div>
+        <div class="quick-benefit-item">
+          <h3>Lose weight without starving</h3>
+          <p>A science based program that works with your hormones instead of fighting them.</p>
+        </div>
+        <div class="quick-benefit-item">
+          <h3>Stay accountable and supported</h3>
+          <p>A personal specialist monitors your progress and adjusts your plan each step.</p>
+        </div>
+      </div>
+
+      <div class="compact-testimonial">
+        <p class="compact-testimonial-text">"I lost 18 Pounds in 3 Months and finally felt stable and supported."</p>
+        <p class="compact-testimonial-author">Sarah M, 36</p>
+      </div>
+
+      <div class="cta-block">
+        <p class="pricing-line">Programs start at $2500. Your consultation is free and private.</p>
+        <a href="#consultation" class="btn-primary">
+          Book Your Consultation
+          <span class="btn-arrow">→</span>
+        </a>
+        <p class="phone-line">
+          Prefer to talk to someone?<br>
+          Call us at <a href="tel:9052018005" class="phone-link">905 201 8005</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="consultation" class="section-booking">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Take the First Step</div>
+        <h2>Book Your Private Consultation</h2>
+        <p>
+          No pressure. No judgment. Just honest answers about whether our program is right for you.
+        </p>
+      </div>
+
+      <div class="booking-wrapper">
+        <form name="sherlase-wellness" method="POST" data-netlify="true" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="sherlase-wellness" />
+
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-input" placeholder="Jane Smith" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" name="phone" class="form-input" placeholder="(905) 555-0123" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-input" placeholder="jane@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Age Range</label>
+            <select name="age" class="form-input form-select" required>
+              <option value="">Select one</option>
+              <option value="35-45">35-45</option>
+              <option value="45-55">45-55</option>
+              <option value="55-65">55-65</option>
+              <option value="65+">65+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Primary Goal</label>
+            <select name="goal" class="form-input form-select" required>
+              <option value="">Select one</option>
+              <option value="Weight Loss">Weight Loss (15-30 lbs)</option>
+              <option value="Significant Weight Loss">Significant Weight Loss (30+ lbs)</option>
+              <option value="Metabolic Health">Metabolic Health & Energy</option>
+              <option value="Hormone Balance">Hormone Balance</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">Request Free Consultation</button>
+
+          <p class="form-note">
+            Located in Markham, ON | Secure & Confidential | No Obligation
+          </p>
+        </form>
       </div>
     </div>
   </section>
@@ -1012,68 +1201,6 @@
             <p>Age 36 Complete Care Client</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking Section -->
-  <section id="consult" class="section-booking">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">Take the First Step</div>
-        <h2>Book Your Private Consultation</h2>
-        <p>
-          No pressure. No judgment. Just honest answers about whether our program is right for you.
-        </p>
-      </div>
-
-      <div class="booking-wrapper">
-        <form name="sherlase-wellness" method="POST" data-netlify="true" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="sherlase-wellness" />
-
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-input" placeholder="Jane Smith" required />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" name="phone" class="form-input" placeholder="(905) 555-0123" required />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-input" placeholder="jane@example.com" required />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Age Range</label>
-            <select name="age" class="form-input form-select" required>
-              <option value="">Select one</option>
-              <option value="35-45">35-45</option>
-              <option value="45-55">45-55</option>
-              <option value="55-65">55-65</option>
-              <option value="65+">65+</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Primary Goal</label>
-            <select name="goal" class="form-input form-select" required>
-              <option value="">Select one</option>
-              <option value="Weight Loss">Weight Loss (15-30 lbs)</option>
-              <option value="Significant Weight Loss">Significant Weight Loss (30+ lbs)</option>
-              <option value="Metabolic Health">Metabolic Health & Energy</option>
-              <option value="Hormone Balance">Hormone Balance</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn-submit">Request Free Consultation</button>
-
-          <p class="form-note">
-            Located in Markham, ON | Secure & Confidential | No Obligation
-          </p>
-        </form>
       </div>
     </div>
   </section>
