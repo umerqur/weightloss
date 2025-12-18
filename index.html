@@ -21,6 +21,9 @@
     }
   </script>
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Fonts: Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -657,7 +660,6 @@
       color: var(--white);
       border-color: var(--rose);
       position: relative;
-      transform: scale(1.05);
     }
 
     .program-card.featured h3,
@@ -1145,8 +1147,8 @@
         </p>
       </div>
 
-      <div class="program-grid">
-        <div class="program-card">
+      <div class="program-grid grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <div class="program-card w-full h-full">
           <div class="program-badge-row">
             <div aria-hidden="true" class="program-badge-placeholder"></div>
           </div>
@@ -1160,7 +1162,7 @@
           </ul>
         </div>
 
-        <div class="program-card featured">
+        <div class="program-card featured w-full h-full">
           <div class="program-badge-row">
             <span class="program-badge">Most Popular</span>
           </div>
@@ -1175,7 +1177,7 @@
           </ul>
         </div>
 
-        <div class="program-card">
+        <div class="program-card w-full h-full">
           <div class="program-badge-row">
             <div aria-hidden="true" class="program-badge-placeholder"></div>
           </div>
