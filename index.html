@@ -667,6 +667,13 @@
       color: var(--white);
     }
 
+    .program-badge-row {
+      min-height: 44px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
     .program-badge {
       display: inline-block;
       background: var(--gold);
@@ -677,12 +684,23 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 24px;
+    }
+
+    .program-badge-placeholder {
+      height: 28px;
     }
 
     .program-card h3 {
       font-size: 1.75rem;
       margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .program-card h3 {
+        white-space: nowrap;
+        font-size: 1.5rem;
+        letter-spacing: -0.025em;
+      }
     }
 
     .program-card h4 {
@@ -1129,6 +1147,9 @@
 
       <div class="program-grid">
         <div class="program-card">
+          <div class="program-badge-row">
+            <div aria-hidden="true" class="program-badge-placeholder"></div>
+          </div>
           <h3>Wellness Coaching</h3>
           <h4>For those exploring non medicated wellness and accountability</h4>
           <ul>
@@ -1140,7 +1161,9 @@
         </div>
 
         <div class="program-card featured">
-          <span class="program-badge">Most Popular</span>
+          <div class="program-badge-row">
+            <span class="program-badge">Most Popular</span>
+          </div>
           <h3>Full Support Program</h3>
           <h4>Our Medicated Weight Loss program</h4>
           <ul>
@@ -1153,6 +1176,9 @@
         </div>
 
         <div class="program-card">
+          <div class="program-badge-row">
+            <div aria-hidden="true" class="program-badge-placeholder"></div>
+          </div>
           <h3>Maintenance Plans Availability</h3>
           <h4>Programs for people who want to continue after their program is finished</h4>
           <ul>
