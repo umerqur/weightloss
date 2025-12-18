@@ -542,92 +542,6 @@
       margin-top: 2px;
     }
 
-    /* Benefits Section */
-    .section-benefits {
-      background: var(--rose);
-      color: var(--white);
-      padding: 120px 0;
-      position: relative;
-    }
-
-    .section-benefits::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background: linear-gradient(
-          135deg,
-          rgba(157, 23, 77, 0.6) 0%,
-          rgba(131, 24, 67, 0.7) 100%
-        ),
-        url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2400&q=85')
-          center / cover no-repeat;
-      opacity: 1;
-      z-index: 0;
-    }
-
-    .section-benefits .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-benefits h2 {
-      color: var(--white);
-      text-align: center;
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 24px;
-    }
-
-    .section-benefits .section-header p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      margin-top: 60px;
-    }
-
-    .benefit-item {
-      text-align: center;
-      padding: 32px 24px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .benefit-item:hover {
-      background: rgba(255, 255, 255, 0.18);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
-    }
-
-    .benefit-number {
-      font-size: 3.5rem;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      margin-bottom: 16px;
-      line-height: 1;
-    }
-
-    .benefit-item h4 {
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .benefit-item p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
     /* Program Section */
     .section-program {
       padding: 120px 0;
@@ -915,7 +829,6 @@
       .quick-benefits-grid { grid-template-columns: 1fr; gap: 32px; }
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
       .method-grid { flex-direction: column; gap: 48px; }
-      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
       .program-grid { grid-template-columns: 1fr; gap: 32px; }
       .program-card.featured { transform: scale(1); }
     }
@@ -932,7 +845,6 @@
       .compact-testimonial-text { font-size: 1.1rem; }
       .section-challenge { padding: 80px 0; }
       .section-approach { padding: 80px 0; }
-      .section-benefits { padding: 80px 0; }
       .section-program { padding: 80px 0; }
       .section-booking { padding: 80px 0; }
       .benefits-list { grid-template-columns: 1fr; }
@@ -941,7 +853,6 @@
         gap: 40px;
         margin-top: 40px;
       }
-      .benefits-grid { grid-template-columns: 1fr; }
       .booking-wrapper { padding: 32px 24px; }
       .testimonial-card { padding: 40px 28px; }
       .testimonial-text { font-size: 1.25rem; }
@@ -1179,44 +1090,6 @@
             <li>Ongoing communication with Health and Wellness Coach</li>
             <li>A 60 minute facial in our spa to celebrate your achievements</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="section-benefits">
-    <div class="container">
-      <div class="section-header">
-        <h2>Real Results, Real Health</h2>
-        <p>
-          Our clients don't just lose weight—they transform their entire health picture.
-        </p>
-      </div>
-
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-number">15-40</div>
-          <h4>Pounds Lost</h4>
-          <p>Average weight loss in first 3 months</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-number">92%</div>
-          <h4>Improved Energy</h4>
-          <p>Report significantly better energy levels</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-number">85%</div>
-          <h4>Better Sleep</h4>
-          <p>Experience improved sleep quality</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-number">78%</div>
-          <h4>Reduced Medications</h4>
-          <p>Reduce or eliminate chronic medications</p>
         </div>
       </div>
     </div>
