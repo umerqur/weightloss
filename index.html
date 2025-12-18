@@ -141,14 +141,45 @@
     .program-overview-content {
       max-width: 800px;
       margin: 0 auto;
-      text-align: center;
+      text-align: left;
     }
 
-    .program-overview-content p {
+    .program-overview-content h2 {
+      font-size: 2rem;
+      margin-bottom: 32px;
+      color: var(--text-dark);
+    }
+
+    .benefits-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 32px;
+      margin-bottom: 32px;
+    }
+
+    .benefits-list li {
       font-size: 1.15rem;
       line-height: 1.8;
       color: var(--text-body);
-      margin-bottom: 20px;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .benefits-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .closing-line {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-body);
+      margin-top: 32px;
     }
 
     /* Quick Benefits Section */
@@ -884,6 +915,7 @@
       .section-benefits { padding: 80px 0; }
       .section-program { padding: 80px 0; }
       .section-booking { padding: 80px 0; }
+      .benefits-list { grid-template-columns: 1fr; }
       .method-grid {
         flex-direction: column;
         gap: 40px;
@@ -945,14 +977,16 @@
   <section class="section-program-overview">
     <div class="container">
       <div class="program-overview-content">
-        <p>
-          This program is for individuals who want to improve blood pressure, sugar levels, cholesterol, joint pain, skin health, sleep quality, and digestion.
-        </p>
-        <p>
-          All of this happens when you nourish your body with goodness.
-        </p>
-        <p>
-          The added benefit is sustainable weight loss.
+        <h2>Who this program is for</h2>
+        <ul class="benefits-list">
+          <li>Blood pressure and sugar balance</li>
+          <li>Cholesterol management</li>
+          <li>Joint pain relief</li>
+          <li>Better skin and digestion</li>
+          <li>Improved sleep quality</li>
+        </ul>
+        <p class="closing-line">
+          The added benefit is sustainable weight loss through proper nourishment and medical guidance.
         </p>
       </div>
     </div>
