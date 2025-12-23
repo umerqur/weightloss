@@ -151,7 +151,7 @@
       font-size: 3rem;
       font-family: 'Playfair Display', serif;
       margin-bottom: 32px;
-      color: var(--text-dark);
+      color: var(--rose);
     }
 
     .benefits-list {
@@ -184,91 +184,6 @@
       line-height: 1.8;
       color: var(--text-light);
       margin-top: 32px;
-    }
-
-    /* Quick Benefits Section */
-    .section-quick-benefits {
-      padding: 80px 0 60px;
-      background: var(--white);
-    }
-
-    .quick-benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      margin-bottom: 48px;
-    }
-
-    .quick-benefit-item {
-      text-align: left;
-    }
-
-    .quick-benefit-item h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .quick-benefit-item p {
-      font-size: 1rem;
-      color: var(--text-body);
-      line-height: 1.7;
-    }
-
-    .compact-testimonial {
-      max-width: 700px;
-      margin: 0 auto 48px;
-      background: var(--rose-light);
-      padding: 32px 40px;
-      border-radius: 16px;
-      text-align: center;
-      border-left: 4px solid var(--rose);
-    }
-
-    .compact-testimonial-text {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      color: var(--text-dark);
-      font-style: italic;
-      margin-bottom: 12px;
-    }
-
-    .compact-testimonial-author {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      font-weight: 600;
-    }
-
-    .cta-block {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .pricing-line {
-      font-size: 1.25rem;
-      color: var(--text-dark);
-      margin-bottom: 24px;
-      font-weight: 500;
-    }
-
-    .phone-line {
-      margin-top: 20px;
-      font-size: 0.95rem;
-      color: var(--text-body);
-    }
-
-    .phone-link {
-      color: var(--rose);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-
-    .phone-link:hover {
-      color: var(--rose-hover);
-      text-decoration: underline;
     }
 
     /* Hero Section with Slideshow */
@@ -346,8 +261,21 @@
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       line-height: 1.05;
-      margin-bottom: 32px;
+      margin-bottom: 18px;
       text-shadow: 0 2px 4px rgba(255,255,255,0.3);
+    }
+
+    .hero-price {
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--rose);
+      background: rgba(255, 241, 242, 0.85);
+      border: 1px solid rgba(157, 23, 77, 0.15);
+      padding: 10px 14px;
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 22px;
     }
 
     .hero-lead {
@@ -414,7 +342,7 @@
     .section-header h2 {
       font-size: 3rem;
       font-family: 'Playfair Display', serif;
-      color: var(--text-dark);
+      color: var(--rose);
       margin-bottom: 24px;
     }
 
@@ -431,13 +359,15 @@
       margin-top: 60px;
     }
 
+    /* Updated: rose cards with white text for more colour */
     .challenge-card {
-      background: var(--white);
+      background: linear-gradient(135deg, var(--rose) 0%, var(--rose-hover) 100%);
       padding: 48px 36px;
       border-radius: 20px;
       box-shadow: var(--shadow-lg);
       transition: all 0.3s ease;
-      border: 1px solid var(--border-light);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--white);
     }
 
     .challenge-card:hover {
@@ -452,14 +382,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--rose-light) 0%, rgba(157, 23, 77, 0.1) 100%);
+      background: rgba(255, 255, 255, 0.16);
       border-radius: 12px;
-      color: var(--rose);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .challenge-icon svg {
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
       stroke: currentColor;
       fill: none;
       stroke-width: 2;
@@ -470,11 +401,11 @@
     .challenge-card h3 {
       font-size: 1.5rem;
       margin-bottom: 16px;
-      color: var(--text-dark);
+      color: var(--white);
     }
 
     .challenge-card p {
-      color: var(--text-body);
+      color: rgba(255, 255, 255, 0.9);
       line-height: 1.7;
     }
 
@@ -595,6 +526,30 @@
       color: var(--white);
     }
 
+    /* Curated note */
+    .curated-note {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: var(--rose-light);
+      border: 1px solid rgba(157, 23, 77, 0.12);
+      border-left: 4px solid var(--rose);
+      padding: 18px 20px;
+      border-radius: 14px;
+      color: var(--text-dark);
+      box-shadow: var(--shadow-sm);
+      text-align: left;
+    }
+
+    .curated-note strong {
+      color: var(--rose);
+    }
+
+    .curated-note p {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: var(--text-body);
+    }
+
     /* Booking Section */
     .section-booking {
       padding: 120px 0;
@@ -696,7 +651,6 @@
       .hero h1 { font-size: 3.5rem; }
       .hero-stripe { clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%); }
       .section-header h2 { font-size: 2.5rem; }
-      .quick-benefits-grid { grid-template-columns: 1fr; gap: 32px; }
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
       .program-grid { grid-template-columns: 1fr; gap: 32px; }
       .program-card.featured { transform: scale(1); }
@@ -765,10 +719,14 @@
     <div class="container">
       <div class="hero-content">
         <h1>Markham's Medicated Weight Loss Program</h1>
+
+        <div class="hero-price">3 Month Personalized Programs Starting at $695.00</div>
+
         <p class="hero-lead">
           Wellness that works.
           Helping individuals take control of their health and well being through nutritional counseling, accountability, medication options, and movement experts.
         </p>
+
         <a href="#consultation" class="btn-primary">
           Start Your Journey
           <span class="btn-arrow">→</span>
@@ -790,10 +748,10 @@
       <div class="challenge-grid">
         <div class="challenge-card">
           <div class="challenge-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
-              <path d="M2 17L12 22L22 17"/>
-              <path d="M2 12L12 17L22 12"/>
+            <!-- Updated icon: heart and support -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 3.5a5.5 5.5 0 0 0-4.5 2.3A5.5 5.5 0 0 0 3 9.1c0 6.1 9 11.4 9 11.4s9-5.3 9-11.4a5.2 5.2 0 0 0-4.5-5.6z"/>
+              <path d="M9 13.2l2 2.1 4-4.2"/>
             </svg>
           </div>
           <h3>Weekly Support</h3>
@@ -802,10 +760,11 @@
 
         <div class="challenge-card">
           <div class="challenge-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6V12L16 14"/>
-              <path d="M8 2H16"/>
+            <!-- Updated icon: pill -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 13.5l-4 4a4 4 0 0 0 5.7 5.7l4-4"/>
+              <path d="M13.5 10.5l4-4a4 4 0 1 0-5.7-5.7l-4 4"/>
+              <path d="M8.5 15.5l7-7"/>
             </svg>
           </div>
           <h3>Medication Assistance</h3>
@@ -814,10 +773,11 @@
 
         <div class="challenge-card">
           <div class="challenge-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"/>
-              <path d="M12 10V14"/>
-              <path d="M9 12L12 14L15 12"/>
+            <!-- Updated icon: sparkles -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l1.2 4.1L17 7.5l-3.8 1.4L12 13l-1.2-4.1L7 7.5l3.8-1.4L12 2z"/>
+              <path d="M19 12l.7 2.4L22 15l-2.3.6L19 18l-.7-2.4L16 15l2.3-.6L19 12z"/>
+              <path d="M5 14l.7 2.4L8 17l-2.3.6L5 20l-.7-2.4L2 17l2.3-.6L5 14z"/>
             </svg>
           </div>
           <h3>And More</h3>
@@ -915,7 +875,6 @@
       <div class="section-header">
         <div class="section-label">Choose Your Path</div>
         <h2>Personalized Programs</h2>
-        <p class="pricing-line">3 Month Personalized Programs Starting at $695.00</p>
         <p>
           Select the level of support that fits your goals, timeline, and lifestyle.
         </p>
@@ -973,6 +932,16 @@
           </ul>
         </div>
       </div>
+
+      <!-- Curated programs note (discount prevention without sounding harsh) -->
+      <div class="curated-note">
+        <p>
+          <strong>Note:</strong> Our programs are curated for success and priced as a complete plan.
+          We personalize your care based on your needs, but program pricing is not adjusted by removing individual components.
+          If something is not suitable for you, we will guide you to the best option during your consultation.
+        </p>
+      </div>
+
     </div>
   </section>
 
