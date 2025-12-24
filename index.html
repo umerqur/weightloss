@@ -69,13 +69,11 @@
 
     .serif { font-family: 'Playfair Display', serif; }
 
-    /* Shared soft rose background */
     .soft-rose-bg {
       background: radial-gradient(circle at 20% 20%, rgba(157, 23, 77, 0.10) 0%, rgba(255, 241, 242, 0.92) 45%, rgba(255, 255, 255, 1) 100%);
       border-top: 1px solid rgba(17, 24, 39, 0.06);
     }
 
-    /* Container */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -113,7 +111,7 @@
     .nav-cta {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: var(--rose);
       color: var(--white);
       padding: 12px 28px;
@@ -141,58 +139,7 @@
       transform: translateY(-1px);
     }
 
-    /* Program Overview Section */
-    .section-program-overview {
-      padding: 100px 0;
-    }
-
-    .program-overview-content {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .program-overview-content h2 {
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 32px;
-      color: var(--rose);
-    }
-
-    .benefits-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px 32px;
-      margin-bottom: 32px;
-      justify-items: start;
-    }
-
-    .benefits-list li {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--text-light);
-      position: relative;
-      padding-left: 28px;
-    }
-
-    .benefits-list li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--rose);
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .closing-line {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--text-light);
-      margin-top: 32px;
-    }
-
-    /* Hero Section with Slideshow */
+    /* Hero */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -202,7 +149,6 @@
       padding-top: 80px;
     }
 
-    /* Background Slideshow */
     .hero-slideshow {
       position: absolute;
       top: 0;
@@ -224,11 +170,8 @@
       background-position: center;
     }
 
-    .hero-slide.active {
-      opacity: 1;
-    }
+    .hero-slide.active { opacity: 1; }
 
-    /* Local wellness images */
     .slide-1 { background-image: url('Weightloss.jpg'); }
     .slide-2 { background-image: url('food bowls on table .jpg'); }
     .slide-3 { background-image: url('girl cooking -2.jpg'); }
@@ -238,7 +181,6 @@
     .slide-7 { background-image: url('iStock-1278940460.jpg'); }
     .slide-8 { background-image: url('ladies lunching.jpg'); }
 
-    /* Diagonal Stripe Overlay */
     .hero-stripe {
       position: absolute;
       top: 0;
@@ -272,9 +214,9 @@
     }
 
     .hero-price-line {
-      margin: 8px 0 16px;
-      font-size: 1.05rem;
-      font-weight: 700;
+      margin: 10px 0 18px;
+      font-size: 1.22rem;
+      font-weight: 800;
       color: var(--rose);
       letter-spacing: -0.01em;
     }
@@ -311,15 +253,10 @@
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
 
-    .btn-arrow {
-      transition: transform 0.3s ease;
-    }
+    .btn-arrow { transition: transform 0.3s ease; }
+    .btn-primary:hover .btn-arrow { transform: translateX(4px); }
 
-    .btn-primary:hover .btn-arrow {
-      transform: translateX(4px);
-    }
-
-    /* Challenge Section */
+    /* Challenge */
     .section-challenge {
       background: var(--cream);
       padding: 120px 0;
@@ -409,10 +346,129 @@
       line-height: 1.7;
     }
 
-    /* Program Section */
-    .section-program {
+    /* Who this program is for */
+    .section-program-overview {
+      padding: 110px 0;
+    }
+
+    .who-card {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      border-radius: 24px;
+      padding: 34px 34px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .benefits-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px 30px;
+      margin-bottom: 22px;
+      justify-items: start;
+    }
+
+    .benefits-list li {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .benefits-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .closing-line {
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-top: 10px;
+      max-width: 860px;
+    }
+
+    /* Booking */
+    .section-booking {
       padding: 120px 0;
     }
+
+    .booking-wrapper {
+      max-width: 600px;
+      margin: 60px auto 0;
+      background: var(--white);
+      padding: 56px;
+      border-radius: 24px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-light);
+    }
+
+    .form-group { margin-bottom: 24px; }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid var(--border-light);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      background: var(--white);
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(157, 23, 77, 0.1);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--rose);
+      color: var(--white);
+      padding: 18px;
+      border-radius: 12px;
+      border: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-submit:hover {
+      background: var(--rose-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-top: 20px;
+    }
+
+    /* Program */
+    .section-program { padding: 120px 0; }
 
     .program-card {
       background: var(--white);
@@ -438,9 +494,7 @@
     .program-card.featured h3,
     .program-card.featured h4,
     .program-card.featured p,
-    .program-card.featured li {
-      color: var(--white);
-    }
+    .program-card.featured li { color: var(--white); }
 
     .program-badge-row {
       min-height: 44px;
@@ -461,9 +515,7 @@
       text-transform: uppercase;
     }
 
-    .program-badge-placeholder {
-      height: 28px;
-    }
+    .program-badge-placeholder { height: 28px; }
 
     .program-card h3 {
       font-size: 1.75rem;
@@ -485,10 +537,7 @@
       font-weight: 500;
     }
 
-    .program-card ul {
-      list-style: none;
-      margin: 24px 0;
-    }
+    .program-card ul { list-style: none; margin: 24px 0; }
 
     .program-card li {
       display: flex;
@@ -571,169 +620,6 @@
       line-height: 1.65;
     }
 
-    /* Booking Section */
-    .section-booking {
-      padding: 120px 0;
-    }
-
-    .booking-wrapper {
-      max-width: 600px;
-      margin: 60px auto 0;
-      background: var(--white);
-      padding: 56px;
-      border-radius: 24px;
-      box-shadow: var(--shadow-xl);
-      border: 1px solid var(--border-light);
-    }
-
-    .form-group {
-      margin-bottom: 24px;
-    }
-
-    .form-label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      margin-bottom: 8px;
-    }
-
-    .form-input,
-    .form-select {
-      width: 100%;
-      padding: 14px 18px;
-      border: 2px solid var(--border-light);
-      border-radius: 12px;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.3s ease;
-      background: var(--white);
-    }
-
-    .form-input:focus,
-    .form-select:focus {
-      outline: none;
-      border-color: var(--rose);
-      box-shadow: 0 0 0 4px rgba(157, 23, 77, 0.1);
-    }
-
-    .btn-submit {
-      width: 100%;
-      background: var(--rose);
-      color: var(--white);
-      padding: 18px;
-      border-radius: 12px;
-      border: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-md);
-    }
-
-    .btn-submit:hover {
-      background: var(--rose-hover);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .form-note {
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--text-light);
-      margin-top: 20px;
-    }
-
-    /* Bottom Close Section */
-    .section-close {
-      padding: 90px 0 70px;
-    }
-
-    .close-card {
-      max-width: 980px;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(17, 24, 39, 0.08);
-      border-radius: 24px;
-      padding: 34px 34px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(10px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .close-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 10% 10%, rgba(157, 23, 77, 0.12) 0%, transparent 55%);
-      pointer-events: none;
-    }
-
-    .close-title {
-      position: relative;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.1rem;
-      color: var(--rose);
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .close-text {
-      position: relative;
-      font-size: 1.12rem;
-      color: var(--text-body);
-      line-height: 1.75;
-      margin-bottom: 22px;
-      max-width: 860px;
-    }
-
-    .close-actions {
-      position: relative;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px 26px;
-      border-radius: 50px;
-      border: 2px solid rgba(157, 23, 77, 0.22);
-      color: var(--rose);
-      text-decoration: none;
-      font-weight: 800;
-      background: rgba(255, 255, 255, 0.75);
-      transition: all 0.25s ease;
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(157, 23, 77, 0.35);
-      transform: translateY(-1px);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-    }
-
-    .close-mini {
-      position: relative;
-      margin-top: 14px;
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
-
-    .close-mini a {
-      color: var(--rose);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .close-mini a:hover {
-      text-decoration: underline;
-      color: var(--rose-hover);
-    }
-
     /* Footer */
     footer {
       background: var(--text-dark);
@@ -762,8 +648,8 @@
       .hero-stripe { clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%); }
       .section-header h2 { font-size: 2.5rem; }
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
-      .program-card.featured { transform: scale(1); }
-      .close-title { font-size: 1.9rem; }
+      .benefits-list { grid-template-columns: 1fr; }
+      .who-card { padding: 28px 22px; }
     }
 
     @media (max-width: 768px) {
@@ -771,31 +657,7 @@
       .hero-lead { font-size: 1.15rem; }
       .hero-content { padding: 60px 24px; }
       .hero-stripe { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-      .section-header h2 { font-size: 2rem; }
-      .section-program-overview { padding: 80px 0; }
-      .section-challenge { padding: 80px 0; }
-      .section-program { padding: 80px 0; }
-      .section-booking { padding: 80px 0; }
-      .benefits-list { grid-template-columns: 1fr; }
-      .booking-wrapper { padding: 32px 24px; }
 
-      .hero-price-line { font-size: 1rem; opacity: 0.9; }
-
-      .policy-note {
-        margin: 18px 0 26px;
-        padding: 16px 14px;
-        border-radius: 16px;
-      }
-
-      .policy-title { font-size: 1rem; }
-      .policy-text { font-size: 0.95rem; }
-
-      .section-close { padding: 70px 0 55px; }
-      .close-card { padding: 26px 18px; border-radius: 18px; }
-      .close-title { font-size: 1.65rem; }
-      .close-text { font-size: 1.02rem; }
-
-      /* Mobile portrait left alignment for headers and text */
       .section-header {
         text-align: left;
         max-width: none;
@@ -804,25 +666,9 @@
 
       .section-label { text-align: left; }
       .section-header p { text-align: left; }
-    }
 
-    /* Desktop center alignment for Who this program is for only */
-    @media (min-width: 769px) {
-      .section-program-overview .program-overview-content {
-        text-align: center;
-      }
-      .section-program-overview .benefits-list {
-        justify-content: center;
-        justify-items: start;
-        max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .section-program-overview .closing-line {
-        max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+      .hero-price-line { font-size: 1.1rem; }
+      .booking-wrapper { padding: 32px 24px; }
     }
   </style>
 </head>
@@ -834,8 +680,8 @@
       <div class="nav-content">
         <div class="logo">Sherlase</div>
         <a href="tel:9052018005" class="nav-cta">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 etc.">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
           Call Now
         </a>
@@ -921,11 +767,16 @@
     </div>
   </section>
 
-  <!-- Who this program is for -->
+  <!-- Who -->
   <section class="section-program-overview soft-rose-bg">
     <div class="container">
-      <div class="program-overview-content">
+      <div class="section-header">
+        <div class="section-label">Who it is for</div>
         <h2>Who this program is for</h2>
+        <p>Health focused support for women who want sustainable changes and guidance.</p>
+      </div>
+
+      <div class="who-card">
         <ul class="benefits-list">
           <li>Blood pressure and sugar balance</li>
           <li>Cholesterol management</li>
@@ -934,6 +785,7 @@
           <li>Improved sleep quality</li>
           <li>Metabolic health support</li>
         </ul>
+
         <p class="closing-line">
           The added benefit is sustainable weight loss through proper nourishment and medical guidance.
         </p>
@@ -999,7 +851,7 @@
     </div>
   </section>
 
-  <!-- Program Options -->
+  <!-- Programs -->
   <section class="section-program soft-rose-bg">
     <div class="container">
       <div class="section-header">
@@ -1015,7 +867,7 @@
             <path d="M9 12l2 2 4-4"/>
           </svg>
         </div>
-        <div class="policy-copy">
+        <div>
           <div class="policy-title">Curated programs, one complete price</div>
           <p class="policy-text">
             Our programs are designed as complete plans to support results. Care is personalized during your consultation, but pricing is not adjusted by removing individual components. If something is not suitable for you, we will guide you to the best option.
@@ -1073,30 +925,6 @@
             <li>Ongoing communication with Health and Wellness Coach</li>
             <li>A 60 minute facial in our spa to celebrate your achievements</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bottom Close -->
-  <section class="section-close soft-rose-bg">
-    <div class="container">
-      <div class="close-card">
-        <div class="close-title">Built for lasting health and wellness</div>
-        <p class="close-text">
-          Our weight loss plan is designed to support overall health and wellness, focusing on sustainable lifestyle modifications that promote long term vitality, balance, and well being.
-        </p>
-
-        <div class="close-actions">
-          <a href="#consultation" class="btn-primary">
-            Book a Consultation
-            <span class="btn-arrow">→</span>
-          </a>
-          <a href="tel:9052018005" class="btn-secondary">Call 9052018005</a>
-        </div>
-
-        <div class="close-mini">
-          Prefer to speak first? Call <a href="tel:9052018005">9052018005</a> and we will help you choose the right program.
         </div>
       </div>
     </div>
