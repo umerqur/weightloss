@@ -256,6 +256,28 @@
     .btn-arrow { transition: transform 0.3s ease; }
     .btn-primary:hover .btn-arrow { transform: translateX(4px); }
 
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 28px;
+      border-radius: 50px;
+      border: 2px solid rgba(157, 23, 77, 0.25);
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--rose);
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(157, 23, 77, 0.45);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.10);
+    }
+
     /* Challenge */
     .section-challenge {
       background: var(--cream);
@@ -346,7 +368,7 @@
       line-height: 1.7;
     }
 
-    /* Who this program is for */
+    /* Who */
     .section-program-overview {
       padding: 110px 0;
     }
@@ -620,6 +642,65 @@
       line-height: 1.65;
     }
 
+    /* Bottom Close */
+    .section-close {
+      padding: 95px 0;
+    }
+
+    .close-card {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      border-radius: 26px;
+      padding: 44px 44px;
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.10);
+      backdrop-filter: blur(10px);
+    }
+
+    .close-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--rose);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .close-text {
+      font-size: 1.12rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      max-width: 860px;
+      margin-bottom: 22px;
+    }
+
+    .close-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+
+    .close-mini {
+      font-size: 0.98rem;
+      color: var(--text-body);
+    }
+
+    .close-mini a {
+      color: var(--rose);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .close-mini a:hover {
+      color: var(--rose-hover);
+      text-decoration: underline;
+    }
+
     /* Footer */
     footer {
       background: var(--text-dark);
@@ -650,6 +731,8 @@
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
       .benefits-list { grid-template-columns: 1fr; }
       .who-card { padding: 28px 22px; }
+      .close-card { padding: 34px 26px; }
+      .close-title { font-size: 2.05rem; }
     }
 
     @media (max-width: 768px) {
@@ -668,7 +751,21 @@
       .section-header p { text-align: left; }
 
       .hero-price-line { font-size: 1.1rem; }
+
       .booking-wrapper { padding: 32px 24px; }
+
+      .close-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .close-title { font-size: 1.9rem; }
     }
   </style>
 </head>
@@ -771,9 +868,7 @@
   <section class="section-program-overview soft-rose-bg">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Who it is for</div>
         <h2>Who this program is for</h2>
-        <p>Health focused support for women who want sustainable changes and guidance.</p>
       </div>
 
       <div class="who-card">
@@ -925,6 +1020,30 @@
             <li>Ongoing communication with Health and Wellness Coach</li>
             <li>A 60 minute facial in our spa to celebrate your achievements</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Close -->
+  <section class="section-close soft-rose-bg">
+    <div class="container">
+      <div class="close-card">
+        <div class="close-title">Built for lasting health and wellness</div>
+        <p class="close-text">
+          Our weight loss plan is designed to support overall health and wellness, focusing on sustainable lifestyle modifications that promote long term vitality, balance, and well being.
+        </p>
+
+        <div class="close-actions">
+          <a href="#consultation" class="btn-primary">
+            Book a Consultation
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="tel:9052018005" class="btn-secondary">Call 9052018005</a>
+        </div>
+
+        <div class="close-mini">
+          Prefer to speak first? Call <a href="tel:9052018005">9052018005</a> and we will help you choose the right program.
         </div>
       </div>
     </div>
