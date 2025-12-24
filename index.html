@@ -265,7 +265,7 @@
       text-shadow: 0 2px 4px rgba(255,255,255,0.3);
     }
 
-    /* Updated: premium price line, not a pill */
+    /* Premium price line */
     .hero-price-line {
       margin: 8px 0 16px;
       font-size: 1.05rem;
@@ -335,7 +335,7 @@
       margin-bottom: 16px;
     }
 
-    /* Updated: rose titles for more colour */
+    /* Rose titles for more colour */
     .section-header h2 {
       font-size: 3rem;
       font-family: 'Playfair Display', serif;
@@ -356,7 +356,7 @@
       margin-top: 60px;
     }
 
-    /* Updated: rose cards with white text */
+    /* Rose cards with white text */
     .challenge-card {
       background: linear-gradient(135deg, var(--rose) 0%, var(--rose-hover) 100%);
       padding: 48px 36px;
@@ -523,7 +523,7 @@
       color: var(--white);
     }
 
-    /* Updated: premium policy note */
+    /* Premium policy note */
     .policy-note {
       max-width: 980px;
       margin: 26px auto 34px;
@@ -651,6 +651,98 @@
       margin-top: 20px;
     }
 
+    /* New: bottom close section */
+    .section-close {
+      padding: 90px 0 70px;
+      background: radial-gradient(circle at 20% 20%, rgba(157, 23, 77, 0.10) 0%, rgba(255, 241, 242, 0.9) 45%, rgba(255, 255, 255, 1) 100%);
+      border-top: 1px solid rgba(17, 24, 39, 0.06);
+    }
+
+    .close-card {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      border-radius: 24px;
+      padding: 34px 34px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .close-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 10%, rgba(157, 23, 77, 0.12) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .close-title {
+      position: relative;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      color: var(--rose);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .close-text {
+      position: relative;
+      font-size: 1.12rem;
+      color: var(--text-body);
+      line-height: 1.75;
+      margin-bottom: 22px;
+      max-width: 860px;
+    }
+
+    .close-actions {
+      position: relative;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 26px;
+      border-radius: 50px;
+      border: 2px solid rgba(157, 23, 77, 0.22);
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.75);
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(157, 23, 77, 0.35);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .close-mini {
+      position: relative;
+      margin-top: 14px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    .close-mini a {
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .close-mini a:hover {
+      text-decoration: underline;
+      color: var(--rose-hover);
+    }
+
     /* Footer */
     footer {
       background: var(--text-dark);
@@ -681,6 +773,7 @@
       .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
       .program-grid { grid-template-columns: 1fr; gap: 32px; }
       .program-card.featured { transform: scale(1); }
+      .close-title { font-size: 1.9rem; }
     }
 
     @media (max-width: 768px) {
@@ -708,6 +801,11 @@
       }
       .policy-title { font-size: 1rem; }
       .policy-text { font-size: 0.95rem; }
+
+      .section-close { padding: 70px 0 55px; }
+      .close-card { padding: 26px 18px; border-radius: 18px; }
+      .close-title { font-size: 1.65rem; }
+      .close-text { font-size: 1.02rem; }
 
       /* Mobile portrait left alignment for headers and text */
       .section-header {
@@ -806,7 +904,7 @@
             </svg>
           </div>
           <h3>Medication Assistance</h3>
-          <p>If you choose, Dr. Rotstein provides information and guidance on medications such as semaglutides. A prescription is provided if it is appropriate for you.</p>
+          <p>If you choose, Dr. Rotstein provides information and guidance on medication options such as GLP 1 medications including semaglutides. A prescription is provided if it is appropriate for you.</p>
         </div>
 
         <div class="challenge-card">
@@ -976,12 +1074,36 @@
           <h3>Maintenance Plans Availability</h3>
           <h4>Programs for people who want to continue after their program is finished</h4>
           <ul>
-            <li>Weekly or bi weekly weight ins</li>
+            <li>Weekly or bi weekly weigh ins</li>
             <li>Ongoing prescriptions</li>
             <li>B12 injections</li>
             <li>Ongoing communication with Health and Wellness Coach</li>
             <li>A 60 minute facial in our spa to celebrate your achievements</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Close Section -->
+  <section class="section-close">
+    <div class="container">
+      <div class="close-card">
+        <div class="close-title">Built for lasting health and wellness</div>
+        <p class="close-text">
+          Our weight loss plan is designed to support overall health and wellness, focusing on sustainable lifestyle modifications that promote long term vitality, balance, and well being.
+        </p>
+
+        <div class="close-actions">
+          <a href="#consultation" class="btn-primary">
+            Book a Consultation
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="tel:9052018005" class="btn-secondary">Call 9052018005</a>
+        </div>
+
+        <div class="close-mini">
+          Prefer to speak first? Call <a href="tel:9052018005">9052018005</a> and we will help you choose the right program.
         </div>
       </div>
     </div>
