@@ -69,11 +69,13 @@
 
     .serif { font-family: 'Playfair Display', serif; }
 
+    /* Background gradient sections */
     .soft-rose-bg {
-      background: radial-gradient(circle at 20% 20%, rgba(157, 23, 77, 0.10) 0%, rgba(255, 241, 242, 0.92) 45%, rgba(255, 255, 255, 1) 100%);
+      background: radial-gradient(circle at 18% 18%, rgba(157, 23, 77, 0.12) 0%, rgba(255, 241, 242, 0.92) 42%, rgba(255, 255, 255, 1) 100%);
       border-top: 1px solid rgba(17, 24, 39, 0.06);
     }
 
+    /* Container */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -117,7 +119,7 @@
       padding: 12px 28px;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
       transition: all 0.3s ease;
       box-shadow: var(--shadow-sm);
@@ -139,7 +141,7 @@
       transform: translateY(-1px);
     }
 
-    /* Hero */
+    /* Hero Section with Slideshow */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -149,6 +151,7 @@
       padding-top: 80px;
     }
 
+    /* Background Slideshow */
     .hero-slideshow {
       position: absolute;
       top: 0;
@@ -181,6 +184,7 @@
     .slide-7 { background-image: url('iStock-1278940460.jpg'); }
     .slide-8 { background-image: url('ladies lunching.jpg'); }
 
+    /* Diagonal Stripe Overlay */
     .hero-stripe {
       position: absolute;
       top: 0;
@@ -199,7 +203,7 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 650px;
+      max-width: 680px;
       padding: 60px 0 60px 40px;
     }
 
@@ -209,25 +213,25 @@
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       line-height: 1.05;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       text-shadow: 0 2px 4px rgba(255,255,255,0.3);
     }
 
     .hero-price-line {
       margin: 10px 0 18px;
-      font-size: 1.22rem;
-      font-weight: 800;
+      font-size: 1.28rem;
+      font-weight: 900;
       color: var(--rose);
       letter-spacing: -0.01em;
     }
 
     .hero-lead {
-      font-size: 1.4rem;
-      line-height: 1.7;
-      margin-bottom: 40px;
+      font-size: 1.25rem;
+      line-height: 1.75;
+      margin-bottom: 36px;
       color: var(--text-body);
-      font-weight: 400;
-      max-width: 550px;
+      font-weight: 500;
+      max-width: 560px;
     }
 
     .btn-primary {
@@ -239,7 +243,7 @@
       padding: 20px 40px;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1.1rem;
       transition: all 0.3s ease;
       box-shadow: var(--shadow-xl);
@@ -256,43 +260,16 @@
     .btn-arrow { transition: transform 0.3s ease; }
     .btn-primary:hover .btn-arrow { transform: translateX(4px); }
 
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px 28px;
-      border-radius: 50px;
-      border: 2px solid rgba(157, 23, 77, 0.25);
-      background: rgba(255, 255, 255, 0.75);
-      color: var(--rose);
-      font-weight: 800;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(157, 23, 77, 0.45);
-      transform: translateY(-1px);
-      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.10);
-    }
-
-    /* Challenge */
-    .section-challenge {
-      background: var(--cream);
-      padding: 120px 0;
-    }
-
+    /* Section header */
     .section-header {
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto 80px;
+      max-width: 820px;
+      margin: 0 auto 64px;
     }
 
     .section-label {
       color: var(--gold);
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.875rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -303,27 +280,33 @@
       font-size: 3rem;
       font-family: 'Playfair Display', serif;
       color: var(--rose);
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .section-header p {
-      font-size: 1.25rem;
+      font-size: 1.18rem;
       color: var(--text-light);
       line-height: 1.8;
+    }
+
+    /* Challenge section */
+    .section-challenge {
+      background: var(--cream);
+      padding: 105px 0;
     }
 
     .challenge-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      margin-top: 60px;
+      gap: 36px;
+      margin-top: 56px;
     }
 
     .challenge-card {
       background: linear-gradient(135deg, var(--rose) 0%, var(--rose-hover) 100%);
-      padding: 48px 36px;
-      border-radius: 20px;
-      box-shadow: var(--shadow-lg);
+      padding: 46px 34px;
+      border-radius: 22px;
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.14);
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.18);
       color: var(--white);
@@ -331,18 +314,18 @@
 
     .challenge-card:hover {
       transform: translateY(-8px);
-      box-shadow: var(--shadow-xl);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
     }
 
     .challenge-icon {
       width: 56px;
       height: 56px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: rgba(255, 255, 255, 0.16);
-      border-radius: 12px;
+      border-radius: 14px;
       color: var(--white);
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
@@ -358,29 +341,30 @@
     }
 
     .challenge-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
+      font-size: 1.45rem;
+      margin-bottom: 12px;
       color: var(--white);
     }
 
     .challenge-card p {
       color: rgba(255, 255, 255, 0.9);
       line-height: 1.7;
+      font-size: 1.02rem;
     }
 
-    /* Who */
+    /* Who section */
     .section-program-overview {
-      padding: 110px 0;
+      padding: 95px 0;
     }
 
     .who-card {
       max-width: 980px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.90);
       border: 1px solid rgba(17, 24, 39, 0.08);
-      border-radius: 24px;
+      border-radius: 26px;
       padding: 34px 34px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.10);
       backdrop-filter: blur(10px);
     }
 
@@ -389,12 +373,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px 30px;
-      margin-bottom: 22px;
+      margin-bottom: 16px;
       justify-items: start;
     }
 
     .benefits-list li {
-      font-size: 1.08rem;
+      font-size: 1.06rem;
       line-height: 1.75;
       color: var(--text-body);
       position: relative;
@@ -406,26 +390,26 @@
       position: absolute;
       left: 0;
       color: var(--rose);
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1rem;
     }
 
     .closing-line {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       line-height: 1.8;
       color: var(--text-light);
-      margin-top: 10px;
+      margin-top: 8px;
       max-width: 860px;
     }
 
-    /* Booking */
+    /* Booking section */
     .section-booking {
-      padding: 120px 0;
+      padding: 105px 0;
     }
 
     .booking-wrapper {
       max-width: 600px;
-      margin: 60px auto 0;
+      margin: 52px auto 0;
       background: var(--white);
       padding: 56px;
       border-radius: 24px;
@@ -437,7 +421,7 @@
 
     .form-label {
       display: block;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
       color: var(--text-dark);
       margin-bottom: 8px;
@@ -469,7 +453,7 @@
       padding: 18px;
       border-radius: 12px;
       border: none;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1.1rem;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -486,17 +470,26 @@
       text-align: center;
       font-size: 0.875rem;
       color: var(--text-light);
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
-    /* Program */
-    .section-program { padding: 120px 0; }
+    /* Program section */
+    .section-program {
+      padding: 110px 0;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
 
     .program-card {
       background: var(--white);
       border: 2px solid var(--border-light);
       border-radius: 24px;
-      padding: 48px 40px;
+      padding: 42px 38px;
       transition: all 0.3s ease;
     }
 
@@ -522,7 +515,7 @@
       min-height: 44px;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .program-badge {
@@ -532,7 +525,7 @@
       padding: 6px 16px;
       border-radius: 50px;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
@@ -540,33 +533,34 @@
     .program-badge-placeholder { height: 28px; }
 
     .program-card h3 {
-      font-size: 1.75rem;
-      margin-bottom: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
     }
 
     @media (min-width: 768px) {
       .program-card h3 {
         white-space: nowrap;
-        font-size: 1.5rem;
+        font-size: 1.45rem;
         letter-spacing: -0.025em;
       }
     }
 
     .program-card h4 {
-      font-size: 1.1rem;
+      font-size: 1.02rem;
       color: var(--text-light);
-      margin-bottom: 24px;
-      font-weight: 500;
+      margin-bottom: 18px;
+      font-weight: 600;
     }
 
-    .program-card ul { list-style: none; margin: 24px 0; }
+    .program-card ul { list-style: none; margin: 18px 0 0; }
 
     .program-card li {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 14px;
-      font-size: 0.95rem;
+      margin-bottom: 12px;
+      font-size: 0.96rem;
+      line-height: 1.45;
     }
 
     .program-card li::before {
@@ -580,7 +574,7 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.75rem;
     }
 
@@ -589,10 +583,11 @@
       color: var(--white);
     }
 
+    /* Pricing note */
     .policy-note {
       max-width: 980px;
-      margin: 26px auto 34px;
-      background: rgba(255, 255, 255, 0.85);
+      margin: 24px auto 0;
+      background: rgba(255, 255, 255, 0.88);
       border: 1px solid rgba(17, 24, 39, 0.08);
       border-left: 4px solid var(--rose);
       border-radius: 18px;
@@ -628,7 +623,7 @@
     }
 
     .policy-title {
-      font-weight: 800;
+      font-weight: 900;
       color: var(--text-dark);
       letter-spacing: -0.015em;
       margin-bottom: 6px;
@@ -644,27 +639,27 @@
 
     /* Bottom Close */
     .section-close {
-      padding: 95px 0;
+      padding: 105px 0;
     }
 
     .close-card {
       max-width: 980px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid rgba(17, 24, 39, 0.08);
-      border-radius: 26px;
-      padding: 44px 44px;
-      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.10);
-      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 46px 46px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+      backdrop-filter: blur(12px);
     }
 
     .close-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: 700;
       color: var(--rose);
       letter-spacing: -0.02em;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       line-height: 1.15;
     }
 
@@ -673,7 +668,7 @@
       color: var(--text-light);
       line-height: 1.8;
       max-width: 860px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .close-actions {
@@ -682,7 +677,29 @@
       flex-wrap: wrap;
       align-items: center;
       margin-top: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 28px;
+      border-radius: 50px;
+      border: 2px solid rgba(157, 23, 77, 0.25);
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--rose);
+      font-weight: 900;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(157, 23, 77, 0.45);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.10);
     }
 
     .close-mini {
@@ -692,7 +709,7 @@
 
     .close-mini a {
       color: var(--rose);
-      font-weight: 800;
+      font-weight: 900;
       text-decoration: none;
     }
 
@@ -728,47 +745,44 @@
       .hero h1 { font-size: 3.5rem; }
       .hero-stripe { clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%); }
       .section-header h2 { font-size: 2.5rem; }
-      .challenge-grid { grid-template-columns: 1fr; gap: 24px; }
+      .challenge-grid { grid-template-columns: 1fr; gap: 22px; }
+      .program-grid { grid-template-columns: 1fr; }
       .benefits-list { grid-template-columns: 1fr; }
       .who-card { padding: 28px 22px; }
-      .close-card { padding: 34px 26px; }
-      .close-title { font-size: 2.05rem; }
+      .close-card { padding: 36px 28px; }
+      .close-title { font-size: 2.15rem; }
+      .booking-wrapper { padding: 40px 28px; }
     }
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.5rem; }
-      .hero-lead { font-size: 1.15rem; }
+      .hero-lead { font-size: 1.12rem; }
       .hero-content { padding: 60px 24px; }
       .hero-stripe { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+      .hero-price-line { font-size: 1.12rem; }
 
+      /* Mobile portrait left alignment */
       .section-header {
         text-align: left;
         max-width: none;
         margin: 0 0 48px;
       }
-
       .section-label { text-align: left; }
       .section-header p { text-align: left; }
-
-      .hero-price-line { font-size: 1.1rem; }
-
-      .booking-wrapper { padding: 32px 24px; }
 
       .close-actions {
         flex-direction: column;
         align-items: stretch;
       }
-
       .btn-primary,
       .btn-secondary {
         width: 100%;
         justify-content: center;
       }
-
-      .close-title { font-size: 1.9rem; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -798,14 +812,15 @@
       <div class="hero-slide slide-7"></div>
       <div class="hero-slide slide-8"></div>
     </div>
+
     <div class="hero-stripe"></div>
+
     <div class="container">
       <div class="hero-content">
         <h1>Markham's Medicated Weight Loss Program</h1>
         <div class="hero-price-line">3 Month Personalized Programs Starting at $695.00</div>
         <p class="hero-lead">
-          Wellness that works.
-          Helping individuals take control of their health and well being through nutritional counseling, accountability, medication options, and movement experts.
+          A supervised approach combining nutrition guidance, accountability, and medication support when appropriate.
         </p>
         <a href="#consultation" class="btn-primary">
           Start Your Journey
@@ -815,13 +830,13 @@
     </div>
   </section>
 
-  <!-- Challenge -->
+  <!-- What it is plus 3 cards -->
   <section class="section-challenge">
     <div class="container">
       <div class="section-header">
         <h2>What is Medicated Weight Loss with Sherlase Clinic</h2>
         <p>
-          What to expect. A supervised approach that combines clinical assessment, nutrition guidance, accountability, and medication support when appropriate to help your body respond more effectively.
+          Clinical assessment and weekly support, with medication options available when appropriate.
         </p>
       </div>
 
@@ -834,7 +849,7 @@
             </svg>
           </div>
           <h3>Weekly Support</h3>
-          <p>You have access to our Health and Wellness Director who keeps you accountable and provides recipes and practical tips you will enjoy.</p>
+          <p>Ongoing check ins, guidance, and accountability with our Health and Wellness Director.</p>
         </div>
 
         <div class="challenge-card">
@@ -845,8 +860,8 @@
               <path d="M8.5 15.5l7-7"/>
             </svg>
           </div>
-          <h3>Medication Assistance</h3>
-          <p>If you choose, Dr. Rotstein provides information and guidance on medication options such as GLP 1 medications including semaglutides. A prescription is provided if it is appropriate for you.</p>
+          <h3>Medication Options</h3>
+          <p>Guidance on medication options such as GLP 1 medications including semaglutides, with prescriptions when appropriate.</p>
         </div>
 
         <div class="challenge-card">
@@ -857,8 +872,8 @@
               <path d="M5 14l.7 2.4L8 17l-2.3.6L5 20l-.7-2.4L2 17l2.3-.6L5 14z"/>
             </svg>
           </div>
-          <h3>And More</h3>
-          <p>We have options to help you achieve your goals. This includes introductions to fitness professionals and B12 injections to help boost energy.</p>
+          <h3>Support for Success</h3>
+          <p>Nutrition guidance, lifestyle support, and optional add ons like B12 injections.</p>
         </div>
       </div>
     </div>
@@ -880,9 +895,8 @@
           <li>Improved sleep quality</li>
           <li>Metabolic health support</li>
         </ul>
-
         <p class="closing-line">
-          The added benefit is sustainable weight loss through proper nourishment and medical guidance.
+          Sustainable results supported by proper nourishment and medical guidance.
         </p>
       </div>
     </div>
@@ -894,7 +908,7 @@
       <div class="section-header">
         <div class="section-label">Take the First Step</div>
         <h2>Book Your Private Consultation</h2>
-        <p>No pressure. No judgment. Just honest answers about whether our program is right for you.</p>
+        <p>Quick form, no pressure, no judgment.</p>
       </div>
 
       <div class="booking-wrapper">
@@ -933,14 +947,16 @@
               <option value="">Select one</option>
               <option value="Weight Loss">Weight Loss (15-30 lbs)</option>
               <option value="Significant Weight Loss">Significant Weight Loss (30+ lbs)</option>
-              <option value="Metabolic Health">Metabolic Health & Energy</option>
+              <option value="Metabolic Health">Metabolic Health and Energy</option>
               <option value="Hormone Balance">Hormone Balance</option>
             </select>
           </div>
 
           <button type="submit" class="btn-submit">Request Free Consultation</button>
 
-          <p class="form-note">Located in Markham, ON | Secure & Confidential | No Obligation</p>
+          <p class="form-note">
+            Located in Markham, ON | Secure and Confidential | No Obligation
+          </p>
         </form>
       </div>
     </div>
@@ -952,7 +968,7 @@
       <div class="section-header">
         <div class="section-label">Choose Your Path</div>
         <h2>Personalized Programs</h2>
-        <p>Select the level of support that fits your goals, timeline, and lifestyle.</p>
+        <p>Curated options designed to support results.</p>
       </div>
 
       <div class="policy-note" role="note" aria-label="Program pricing note">
@@ -963,62 +979,56 @@
           </svg>
         </div>
         <div>
-          <div class="policy-title">Curated programs, one complete price</div>
+          <div class="policy-title">Curated plans, complete pricing</div>
           <p class="policy-text">
-            Our programs are designed as complete plans to support results. Care is personalized during your consultation, but pricing is not adjusted by removing individual components. If something is not suitable for you, we will guide you to the best option.
+            Programs are priced as complete plans and pricing is not adjusted by removing individual components.
           </p>
         </div>
       </div>
 
-      <div class="program-grid grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-        <div class="program-card w-full h-full">
+      <div class="program-grid">
+        <div class="program-card">
           <div class="program-badge-row">
             <div aria-hidden="true" class="program-badge-placeholder"></div>
           </div>
           <h3>Wellness Coaching</h3>
-          <h4>For those exploring non medicated wellness and accountability</h4>
+          <h4>Non medicated wellness and accountability</h4>
           <ul>
-            <li>Initial Full Assessment</li>
+            <li>Initial assessment</li>
             <li>Weekly follow ups and weigh ins</li>
-            <li>Sessions with professional trainers</li>
-            <li>B12 Injections</li>
-            <li>On going communications with our Health and Wellness Director</li>
-            <li>Support and Accountability</li>
-            <li>And more</li>
+            <li>Nutrition guidance</li>
+            <li>Support and accountability</li>
+            <li>Optional B12 injections</li>
           </ul>
         </div>
 
-        <div class="program-card featured w-full h-full">
+        <div class="program-card featured">
           <div class="program-badge-row">
             <span class="program-badge">Most Popular</span>
           </div>
           <h3>Medicated Support Program</h3>
-          <h4>Consultation and prescriptions when appropriate</h4>
+          <h4>Prescriptions when appropriate</h4>
           <ul>
             <li>Consultation with Dr. Rotstein on GLP 1</li>
-            <li>Prescriptions Provided</li>
-            <li>Initial Full Assessment</li>
+            <li>Prescriptions provided when appropriate</li>
+            <li>Initial assessment</li>
             <li>Weekly follow ups and weigh ins</li>
-            <li>Extra sessions with professional trainers</li>
-            <li>B12 Injections</li>
-            <li>On going communications with our Health and Wellness Director</li>
-            <li>Support and Accountability</li>
-            <li>And more</li>
+            <li>Ongoing support and accountability</li>
           </ul>
         </div>
 
-        <div class="program-card w-full h-full">
+        <div class="program-card">
           <div class="program-badge-row">
             <div aria-hidden="true" class="program-badge-placeholder"></div>
           </div>
           <h3>Maintenance Plans Availability</h3>
-          <h4>Programs for people who want to continue after their program is finished</h4>
+          <h4>Continue after your program</h4>
           <ul>
             <li>Weekly or bi weekly weigh ins</li>
-            <li>Ongoing prescriptions</li>
+            <li>Ongoing support</li>
+            <li>Ongoing prescriptions when appropriate</li>
             <li>B12 injections</li>
-            <li>Ongoing communication with Health and Wellness Coach</li>
-            <li>A 60 minute facial in our spa to celebrate your achievements</li>
+            <li>1 facial to celebrate your progress</li>
           </ul>
         </div>
       </div>
@@ -1031,7 +1041,7 @@
       <div class="close-card">
         <div class="close-title">Built for lasting health and wellness</div>
         <p class="close-text">
-          Our weight loss plan is designed to support overall health and wellness, focusing on sustainable lifestyle modifications that promote long term vitality, balance, and well being.
+          A supportive plan focused on sustainable lifestyle changes that improve vitality, balance, and well being.
         </p>
 
         <div class="close-actions">
@@ -1053,8 +1063,8 @@
   <footer>
     <div class="container">
       <div class="footer-logo">Sherlase</div>
-      <p>Wellness & Transformation Clinic | Markham, Ontario</p>
-      <p style="margin-top: 12px; opacity: 0.5;">&copy; 2025 Sherlase Clinic & Spa. All rights reserved.</p>
+      <p>Wellness and Transformation Clinic | Markham, Ontario</p>
+      <p style="margin-top: 12px; opacity: 0.5;">&copy; 2025 Sherlase Clinic and Spa. All rights reserved.</p>
     </div>
   </footer>
 
