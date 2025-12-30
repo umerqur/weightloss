@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Thank You | Sherlase Clinic</title>
+  <meta name="description" content="Thank you. Your consultation request has been received.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17719269754"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17719269754');
+
+    /* Fire conversion on thank you page load */
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17719269754/REPLACE_WITH_YOUR_CONVERSION_LABEL',
+      'value': 10.0,
+      'currency': 'CAD'
+    });
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose: #9d174d;
+      --rose-hover: #831843;
+      --rose-light: #fff1f2;
+      --gold: #ca8a04;
+      --text-dark: #1f2937;
+      --text-body: #4b5563;
+      --text-light: #6b7280;
+      --cream: #fefce8;
+      --white: #ffffff;
+      --border-light: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-body);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .serif { font-family: 'Playfair Display', serif; }
+
+    .soft-rose-bg {
+      background: radial-gradient(circle at 18% 18%, rgba(157, 23, 77, 0.12) 0%, rgba(255, 241, 242, 0.92) 42%, rgba(255, 255, 255, 1) 100%);
+      border-top: 1px solid rgba(17, 24, 39, 0.06);
+      min-height: 100vh;
+      padding-top: 100px;
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      padding: 20px 0;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--rose);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--rose);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+
+    .nav-cta svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .nav-cta:hover {
+      background: var(--rose-hover);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      border-radius: 30px;
+      padding: 54px 46px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(157, 23, 77, 0.10) 0%, rgba(255,255,255,0.0) 55%);
+      pointer-events: none;
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: rgba(157, 23, 77, 0.10);
+      border: 1px solid rgba(157, 23, 77, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon svg {
+      width: 30px;
+      height: 30px;
+      stroke: var(--rose);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--rose);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      max-width: 760px;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step {
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      background: rgba(255, 255, 255, 0.70);
+      border-radius: 18px;
+      padding: 16px 16px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+    }
+
+    .step-kicker {
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 6px;
+    }
+
+    .step-text {
+      color: var(--text-body);
+      font-weight: 600;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--rose);
+      color: var(--white);
+      padding: 18px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-xl);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background: var(--rose-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 28px;
+      border-radius: 50px;
+      border: 2px solid rgba(157, 23, 77, 0.25);
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--rose);
+      font-weight: 900;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(157, 23, 77, 0.45);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.10);
+    }
+
+    .mini {
+      margin-top: 18px;
+      color: var(--text-light);
+      font-size: 0.98rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini a {
+      color: var(--rose);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .mini a:hover {
+      color: var(--rose-hover);
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--text-dark);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 32px 0 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 1024px) {
+      .title { font-size: 2.4rem; }
+      .card { padding: 40px 28px; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .logo { font-size: 1.25rem; }
+      .nav-cta {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+      .nav-cta svg {
+        width: 14px;
+        height: 14px;
+      }
+      .nav-cta-phone { display: none; }
+      .soft-rose-bg { padding-top: 96px; }
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-primary, .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-content">
+        <a class="logo" href="/">Sherlase Clinic</a>
+        <a href="tel:9052018005" class="nav-cta">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Call Now<span class="nav-cta-phone"> (905) 201 8005</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="soft-rose-bg">
+    <div class="container">
+      <div class="card">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </div>
+
+        <h1 class="title">Thank you</h1>
+        <p class="subtitle">
+          Your consultation request has been received. A member of our team will contact you shortly to confirm next steps.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-kicker">Next</div>
+            <div class="step-text">We review your details and match you to the right program.</div>
+          </div>
+          <div class="step">
+            <div class="step-kicker">Call</div>
+            <div class="step-text">We reach out to confirm availability and answer questions.</div>
+          </div>
+          <div class="step">
+            <div class="step-kicker">Visit</div>
+            <div class="step-text">Your private consultation at our Markham clinic.</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn-primary" href="tel:9052018005">Call (905) 201 8005</a>
+          <a class="btn-secondary" href="/">Back to site</a>
+        </div>
+
+        <p class="mini">
+          If you do not hear from us soon, call us at <a href="tel:9052018005">(905) 201 8005</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Sherlase</div>
+      <p>383 Main Street Markham N #7, Markham, Ontario</p>
+      <p style="margin-top: 12px; opacity: 0.5;">&copy; 2025 Sherlase Clinic and Spa. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
