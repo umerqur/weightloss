@@ -1021,18 +1021,6 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Age Range</label>
-            <select name="age" class="form-input form-select" required>
-              <option value="">Select one</option>
-              <option value="Under 35">Under 35</option>
-              <option value="35-44">35 to 44</option>
-              <option value="45-54">45 to 54</option>
-              <option value="55-64">55 to 64</option>
-              <option value="65+">65+</option>
-            </select>
-          </div>
-
-          <div class="form-group">
             <label class="form-label">Primary Goal</label>
             <select name="goal" class="form-input form-select" required>
               <option value="">Select one</option>
@@ -1043,7 +1031,12 @@
             </select>
           </div>
 
-          <button type="submit" class="btn-submit">Request Free Consultation</button>
+          <div class="form-group">
+            <label class="form-label">Anything you would like us to know before we reach out? <span style="font-weight:500; color: var(--text-light);">(optional)</span></label>
+            <textarea name="notes" class="form-input" placeholder="Optional. Example: best time to call, preference for phone or email, or any context you want to share." rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Request Private Consultation</button>
 
           <p class="form-note">
             Located in Markham, ON | Secure and Confidential | No Obligation
